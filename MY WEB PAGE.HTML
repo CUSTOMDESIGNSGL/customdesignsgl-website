@@ -3,32 +3,46 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Custom Designs GL</title>
+ <title>Commercial Scenography</title>
  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
  <header>
-  <h1>Custom Designs GL</h1>
+  <h1>Commercial Scenography</h1>
  </header>
  <main>
-  <section>
-   <h2>Fabricate, Design and Build</h2>
-   <p>Commercial scenography, exhibition stands and sculptures for celebrations and events.</p>
+  <section class="scenography">
+   <h2>Exhibition Stands</h2>
+   <div class="stand">
+    <img src="stand1.jpg" alt="Exhibition Stand 1">
+    <p>Custom-designed exhibition stand for a leading tech company</p>
+   </div>
+   <div class="stand">
+    <img src="stand2.jpg" alt="Exhibition Stand 2">
+    <p>Interactive exhibition stand for a popular consumer brand</p>
+   </div>
   </section>
-  <!-- Add more sections and content as needed -->
+  <section class="scenography">
+   <h2>Event Decor</h2>
+   <div class="decor">
+    <img src="decor1.jpg" alt="Event Decor 1">
+    <p>Luxurious event decor for a high-end corporate event</p>
+   </div>
+   <div class="decor">
+    <img src="decor2.jpg" alt="Event Decor 2">
+    <p>Custom event decor for a themed party</p>
+   </div>
+  </section>
  </main>
- <footer>
-  <!-- Add footer content and links as needed -->
- </footer>
  <script src="script.js"></script>
 </body>
 </html>
-
+```
 CSS (in styles.css file):
-
+```
 body {
  font-family: Arial, sans-serif;
- background-color: #87CEEB; /* Sky blue */
+ background-color: #f7f7f7;
 }
 
 header {
@@ -38,10 +52,6 @@ header {
  text-align: center;
 }
 
-header h1 {
- margin: 0;
-}
-
 main {
  display: flex;
  flex-direction: column;
@@ -49,15 +59,52 @@ main {
  padding: 20px;
 }
 
-section {
- background-color: #fff;
+.scenography {
+ margin-bottom: 40px;
+}
+
+.stand, .decor {
+ margin: 20px;
  padding: 20px;
- margin-bottom: 20px;
+ background-color: #fff;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
- margin-top: 0;
+.stand img, .decor img {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
 }
 
-/* Add more styles as needed */
+.stand p, .decor p {
+ font-size: 16px;
+ color: #666;
+}
+```
+JavaScript (in script.js file):
+```
+// Add a class to the body element to trigger the CSS animations
+document.body.classList.add('animate');
+
+// Animate the exhibition stands and event decor elements
+const stands = document.querySelectorAll('.stand');
+const decor = document.querySelectorAll('.decor');
+
+stands.forEach((stand) => {
+ stand.addEventListener('mouseover', () => {
+  stand.classList.add('hover');
+ });
+ stand.addEventListener('mouseout', () => {
+  stand.classList.remove('hover');
+ });
+});
+
+decor.forEach((decor) => {
+ decor.addEventListener('mouseover', () => {
+  decor.classList.add('hover');
+ });
+ decor.addEventListener('mouseout', () => {
+  decor.classList.remove('hover');
+ });
+});
+```
