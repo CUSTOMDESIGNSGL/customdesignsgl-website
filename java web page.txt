@@ -1,0 +1,65 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Custom Designs GL</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header>
+  <h1>Custom Designs GL</h1>
+ </header>
+ <main>
+  <section>
+   <h2>Fabricate, Design and Build</h2>
+   <p>Commercial scenography, exhibition stands and sculptures for celebrations and events.</p>
+  </section>
+  <!-- Add more sections and content as needed -->
+ </main>
+ <footer>
+  <!-- Add footer content and links as needed -->
+ </footer>
+ <script src="script.js"></script>
+</body>
+</html>
+```
+CSS (in styles.css file):
+```
+body {
+ font-family: Arial, sans-serif;
+ background-color: #87CEEB; /* Sky blue */
+}
+
+header {
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ text-align: center;
+}
+
+header h1 {
+ margin: 0;
+}
+
+main {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+}
+
+section {
+ background-color: #fff;
+ padding: 20px;
+ margin-bottom: 20px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+ margin-top: 0;
+}
+
+/* Add more styles as needed */
+```
